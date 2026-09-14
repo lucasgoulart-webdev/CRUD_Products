@@ -10,11 +10,20 @@
         <Grid.Background>
             <ImageBrush ImageSource="/image (4).png"/>
         </Grid.Background>
-        <Button Content="Central" HorizontalAlignment="Left" Margin="729,46,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="1.676,-0.098"/>
-        <TextBox x:Name="nome" HorizontalAlignment="Center" Margin="0,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="nome_TextChanged"/>
-        <TextBox x:Name="quantidade" HorizontalAlignment="Center" Margin="0,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="quantidade_TextChanged"/>
-        <TextBox x:Name="preco" HorizontalAlignment="Center" Margin="0,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Atualizar" HorizontalAlignment="Center" Margin="0,394,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="Central" HorizontalAlignment="Left" Margin="718,31,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="1.676,-0.098" Width="62" Background="White"/>
+        <TextBox x:Name="nome" HorizontalAlignment="Left" Margin="297,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" TextChanged="nome_TextChanged" Height="34"/>
+        <TextBox x:Name="quantidade" HorizontalAlignment="Left" Margin="297,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" TextChanged="quantidade_TextChanged" RenderTransformOrigin="0.5,0.5" Height="34">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="1.913"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.3"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="preco" HorizontalAlignment="Left" Margin="297,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Height="34"/>
+        <Button x:Name="Atu" Content="Atualizar" HorizontalAlignment="Left" Margin="307,346,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="32" Width="168" Background="White" FontSize="14" FontFamily="Goudy Stout"/>
 
     </Grid>
 </Window>
