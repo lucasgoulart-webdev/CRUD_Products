@@ -85,6 +85,11 @@ namespace CRUD_Products
 
                                         MessageBox.Show("jogo deletado com sucesso!");
 
+                                        ID.Text = null; 
+                                        Window1 abrir = new Window1();
+                                        abrir.Show();
+                                        this.Close();
+
                                     
 
                                 }
@@ -100,6 +105,7 @@ namespace CRUD_Products
                             else
                             {
                                 MessageBox.Show("id não encontrado no banco!");
+                                ID.Text = null;
                             }
                         }
 

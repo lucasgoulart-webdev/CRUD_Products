@@ -39,22 +39,65 @@ namespace CRUD_Products
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
+            bool valido = true;
+
+            if (nome.Text.Length < 2)
+            {
+                MessageBox.Show("nome do jogo deve ser maior que 2 caracteres");
+                valido = false;
+            }
+
+
+
+            if (!int.TryParse(quantidade.Text, out int quantidadee))
+            {
+                MessageBox.Show("Digite apenas números na quantidade!");
+                valido = false;
+                quantidade.Text = null;
+                return;
+            }
+
+
+
+
+            if (!double.TryParse(preco.Text, out double precoo))
+            {
+                MessageBox.Show("Digite apenas números no preco!");
+                preco.Text = null;
+                valido = false;
+                return;
+            }
+
+
             using (MySqlConnection conn = new MySqlConnection(conexao))
             {
                 conn.Open();
 
-                string sql = "INSERT INTO produtos (nome_jogo, quantidade, preco_unidade) VALUES (@nome_jogo, @quantiade, @preco_unidade)";
+                string sql = "UPDATE produtos SET nome_jogo = @nome_jogo, quantidade = @quantidade, preco_unidade = @preco_unidade WHERE id = @id";
 
                 using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                 {
+                    cmd.Parameters.AddWithValue("@id", _idUsuario);
                     cmd.Parameters.AddWithValue("@nome_jogo", nome.Text);
                     cmd.Parameters.AddWithValue("@quantidade", quantidade.Text);
-                    cmd.Parameters.AddWithValue("@preco", preco.Text);
+                    cmd.Parameters.AddWithValue("@preco_unidade", preco.Text);
 
                     cmd.ExecuteNonQuery();
 
+
                 }
             }
+
+            MessageBox.Show("Produto atualizado com sucesso !");
+
+            nome.Text = null;
+            quantidade.Text = null;
+            preco.Text = null;
+
+            Window1 window1 = new Window1();
+            window1.Show();
+            this.Close();
         }
 
         public void carregarTudo()

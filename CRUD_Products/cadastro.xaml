@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRUD_Products"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="cadastro" Height="450" Width="800">
     <Grid>
@@ -15,7 +16,7 @@
         <TextBox x:Name="preco" HorizontalAlignment="Center" Margin="0,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="classifica" HorizontalAlignment="Center" Margin="0,344,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="cadastrar" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top" Click="Button_Click" Height="28" Width="78"/>
-        <Button Content="" HorizontalAlignment="Left" Margin="726,43,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="673,10,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="117" Background="{x:Null}"/>
 
     </Grid>
 </Window>

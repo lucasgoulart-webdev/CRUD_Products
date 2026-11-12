@@ -51,5 +51,12 @@ namespace CRUD_Products
             abrir.Show();
             this.Close();
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            listar abrir = new listar();
+            abrir.Show();
+            this.Close();
+        }
     }
 }

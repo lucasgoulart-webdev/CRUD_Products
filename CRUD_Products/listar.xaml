@@ -4,13 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRUD_Products"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="listar" Height="450" Width="800">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/image (2).png"/>
         </Grid.Background>
-        <DataGrid x:Name="tabela" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,57,206,57"/>
+        <DataGrid x:Name="tabela" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,57,206,57" IsReadOnly="True"/>
         <Button Content="Voltar" HorizontalAlignment="Left" Margin="722,32,0,0" VerticalAlignment="Top" Click="Button_Click" Width="44" Background="White" Foreground="Black" BorderBrush="#FF0097B2"/>
 
     </Grid>
